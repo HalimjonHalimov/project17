@@ -1,13 +1,13 @@
 import { navItems } from "@/utils/nav";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
-
-
 export default function Navbar() {
- const pathname = '/'
+  const router = useRouter();
+  const { pathname } = router;
   return (
-    <div className="w-[388px] h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] p-12">
+    <div className="w-[388px] h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4">
       <div className="w-full h-auto bg-[#140E2D] p-3 rounded-xl">
         <div className="w-full h-auto flex justify-start items-center gap-2 text-xl font-bold text-[#F5F5F5]">
           <span>
@@ -36,7 +36,7 @@ export default function Navbar() {
           <span className="uppercase text-sm font-normal text-[#605D6E]">
             ID: <span className="text-sm">121134154545</span>
           </span>
-          <span className="w-16 h-[27px] text-base flex justify-around items-center bg-[#5A42E3] rounded-full text-[#F5F5F5]">
+          <span className="w-20 h-[30px] text-base flex justify-around items-center bg-[#5A42E3] rounded-full text-[#F5F5F5]">
             <svg
               width="14"
               height="13"
@@ -77,7 +77,7 @@ export default function Navbar() {
       </ul>
       <button
         type="button"
-        className="w-full h-[49px] rounded-full bg-[#0C091A] py-3 px-5 text-[#F5F5F5] text-xl font-bold"
+        className="w-full h-auto rounded-full hover:text-[#0C091A] hover:bg-[#F5F5F5]  bg-[#0C091A] py-1 px-4 text-[#F5F5F5] text-xl font-bold border border-[#0C091A] transition-all duration-150 ease-in-out"
       >
         Exit
       </button>
