@@ -1,7 +1,7 @@
 import { Layout, Title } from "@/components";
+import AccordionCollapse from "@/components/Accordion/Accordion";
 import { cryptoItems } from "@/utils/crypto";
 import { profitItems } from "@/utils/profit";
-
 
 export default function Home() {
   return (
@@ -85,93 +85,97 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-4 my-4">
               <button
                 type="button"
-                className="w-full h-[40px] border border-[#5A42E3] text-[#F5F5F5] text-base font-normal rounded-xl "
+                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] text-base font-normal rounded-xl transition-all duration-150 ease-in-out "
               >
                 Connection 3{" "}
               </button>
               <button
                 type="button"
-                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] text-base font-normal rounded-xl "
+                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] text-base font-normal rounded-xl transition-all duration-150 ease-in-out "
               >
                 Aprovals 3{" "}
               </button>
               <button
                 type="button"
-                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] text-base font-normal rounded-xl "
+                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] text-base font-normal rounded-xl transition-all duration-150 ease-in-out "
               >
                 Domains 3{" "}
               </button>
             </div>
           </div>
         </div>
-        <div className="col-span-3 bg-[#19113E] py-3 px-5 rounded-xl">
-          <div className="w-full h-auto flex justify-between items-center">
-            <Title className="text-[#F5F5F5] text-xl font-bold">
-              The amount of profit
-            </Title>
-            <button type="button">
-              <svg
-                width="12"
-                height="8"
-                viewBox="0 0 12 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+        <div className="col-span-3 flex flex-col justify-start gap-4">
+          <div className="col-span-3 bg-[#19113E] py-3 px-5 rounded-xl">
+            <AccordionCollapse title="The amount of profit" bg={"#19113E"}>
+              <div className="w-full h-auto my-2 grid grid-cols-3">
+                <h6 className="text-sm font-normal text-[#605D6E]">Date:</h6>
+                <h6 className="text-sm font-normal text-[#605D6E]">Amount:</h6>
+                <h6 className="justify-self-end text-sm font-normal text-[#605D6E]">
+                  Status:
+                </h6>
+              </div>
+              {profitItems.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-full h-auto my-2 grid grid-cols-3 text-[#F5F5F5] text-base font-normal"
+                >
+                  <div>{item.date}</div>
+                  <div>{item.amount}$</div>
+                  <div
+                    className={`w-4 h-4 justify-self-end rounded-full ${
+                      item.status == true ? "bg-[#64CB40]" : "bg-[#CB4040]"
+                    }`}
+                  ></div>
+                </div>
+              ))}
+              <button
+                type="button"
+                className="w-full h-auto  my-4 flex justify-start items-center gap-2 text-base font-bold text-[#7E67FF] "
               >
-                <path
-                  d="M1 6.5L6 1.5L11 6.5"
-                  stroke="#F5F5F5"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
+                Get a full statement{" "}
+                <span>
+                  <svg
+                    width="8"
+                    height="12"
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 1L6.5 6L1.5 11"
+                      stroke="#7E67FF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </AccordionCollapse>
           </div>
-          <div className="w-full h-auto my-2 grid grid-cols-3">
-            <h6 className="text-sm font-normal text-[#605D6E]">Date</h6>
-            <h6 className="text-sm font-normal text-[#605D6E]">Amount</h6>
-            <h6 className="justify-self-end text-sm font-normal text-[#605D6E]">
-              Status
-            </h6>
+          <div className="col-span-3 bg-[#19113E] py-3 px-5 rounded-xl">
+            <AccordionCollapse title={"Recent contacts"} bg="#19113E">
+              <div className="w-full h-auto my-2 grid grid-cols-3">
+                <h6 className="text-sm font-normal text-[#605D6E]">Lend:</h6>
+                <h6 className="text-sm font-normal text-[#605D6E]">IP:</h6>
+                <h6 className="justify-self-end text-sm font-normal text-[#605D6E]">
+                  Wallet:
+                </h6>
+              </div>
+              {profitItems.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-full h-auto my-2 grid grid-cols-3 text-[#F5F5F5] text-base font-normal"
+                >
+                  <div>fffsddf.com</div>
+                  <div>123.12.12.12:000</div>
+                  <div className="justify-self-end">113234654465</div>
+                </div>
+              ))}
+            </AccordionCollapse>
           </div>
-          {profitItems.map((item, i) => (
-            <div
-              key={i}
-              className="w-full h-auto my-2 grid grid-cols-3 text-[#F5F5F5] text-base font-normal"
-            >
-              <div>{item.date}</div>
-              <div>{item.amount}$</div>
-              <div
-                className={`w-4 h-4 justify-self-end rounded-full ${
-                  item.status == true ? "bg-[#64CB40]" : "bg-[#CB4040]"
-                }`}
-              ></div>
-            </div>
-          ))}
-          <button
-            type="button"
-            className="w-full h-auto  my-4 flex justify-start items-center gap-2 text-base font-bold text-[#7E67FF] "
-          >
-            Get a full statement{" "}
-            <span>
-              <svg
-                width="8"
-                height="12"
-                viewBox="0 0 8 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.5 1L6.5 6L1.5 11"
-                  stroke="#7E67FF"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </button>
         </div>
+
         <div className="w-full h-auto col-span-2 py-3 px-5 bg-[#140E2D] rounded-xl">
           <Title>Recent payments</Title>
           <div className="w-full h-auto my-2 grid grid-cols-2">
@@ -179,7 +183,10 @@ export default function Home() {
             <h6 className="text-sm font-normal text-[#605D6E]">Amount</h6>
           </div>
           {cryptoItems.map((item, i) => (
-            <div key={i} className="w-full h-auto my-1 grid grid-cols-2 text-[#F5F5F5] text-base font-normal uppercase">
+            <div
+              key={i}
+              className="w-full h-auto my-1 grid grid-cols-2 text-[#F5F5F5] text-base font-normal uppercase"
+            >
               <div className="flex justify-start items-center gap-2">
                 {" "}
                 <span>{item.icon}</span> {item.currency}
@@ -188,47 +195,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="col-span-3 bg-[#19113E] py-3 px-5 rounded-xl">
-          <div className="w-full h-auto flex justify-between items-center">
-            <Title className="text-[#F5F5F5] text-xl font-bold">
-            Recent contacts
-            </Title>
-            <button type="button">
-              <svg
-                width="12"
-                height="8"
-                viewBox="0 0 12 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 6.5L6 1.5L11 6.5"
-                  stroke="#F5F5F5"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="w-full h-auto my-2 grid grid-cols-3">
-            <h6 className="text-sm font-normal text-[#605D6E]">Lend</h6>
-            <h6 className="text-sm font-normal text-[#605D6E]">IP</h6>
-            <h6 className="justify-self-end text-sm font-normal text-[#605D6E]">
-              Wallet
-            </h6>
-          </div>
-          {profitItems.map((item, i) => (
-            <div
-              key={i}
-              className="w-full h-auto my-2 grid grid-cols-3 text-[#F5F5F5] text-base font-normal"
-            >
-              <div>fffsddf.com</div>
-              <div>123.12.12.12:000</div>
-              <div className="justify-self-end">113234654465</div>
-            </div>
-          ))}
-        </div>
+
       </div>
     </Layout>
   );

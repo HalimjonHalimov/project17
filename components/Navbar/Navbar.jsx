@@ -7,7 +7,7 @@ export default function Navbar() {
   const router = useRouter();
   const { pathname } = router;
   return (
-    <div className="w-[388px] h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4">
+    <div className="w-[388px] h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4 rounded-xl">
       <div className="w-full h-auto bg-[#140E2D] p-3 rounded-xl">
         <div className="w-full h-auto flex justify-start items-center gap-2 text-xl font-bold text-[#F5F5F5]">
           <span>
@@ -33,8 +33,8 @@ export default function Navbar() {
           Login
         </div>
         <div className="w-full h-auto flex justify-between items-center gap-4 ">
-          <span className="uppercase text-sm font-normal text-[#605D6E]">
-            ID: <span className="text-sm">121134154545</span>
+          <span className="flex justify-start items-center  uppercase text-sm font-normal text-[#605D6E]">
+            ID:<span className="text-sm">111122121134154545</span>
           </span>
           <span className="w-20 h-[30px] text-base flex justify-around items-center bg-[#5A42E3] rounded-full text-[#F5F5F5]">
             <svg
@@ -62,7 +62,7 @@ export default function Navbar() {
           >
             <Link
               href={item.route}
-              className={`w-full h-auto flex justify-start items-center gap-4  text-xl font-bold ${
+              className={`w-full h-auto flex justify-start items-center gap-4  text-xl font-bold hover:text-[#7E67FF] transition-all duration-150 ease-in-out ${
                 pathname == item.route ? "text-[#7E67FF]" : "text-[#605D6E]"
               } `}
             >
