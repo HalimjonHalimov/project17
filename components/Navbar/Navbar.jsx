@@ -1,11 +1,11 @@
 import { navItems } from "@/utils/nav";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function Navbar() {
-  const router = useRouter();
-  const { pathname } = router;
+export default function Navbar({path}) {
+  const pathname = path
+
   return (
     <div className="w-[388px] h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4 rounded-xl">
       <div className="w-full h-auto bg-[#140E2D] p-3 rounded-xl">

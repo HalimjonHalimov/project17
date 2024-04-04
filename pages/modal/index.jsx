@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Modal() {
   return (
-    <Layout>
+    <Layout path={'/modal'}>
       <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
         <div className="col-span-8 w-full h-auto flex flex-col gap-4">
           <SearchBar id={"modalSearch"} btnTitle=" Upload modal" />

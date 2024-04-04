@@ -5,8 +5,9 @@ import { profitItems } from "@/utils/profit";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout path={'/'}>
       <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
+        
         <div className="col-span-8 bg-[#140E2D] py-3 px-5 rounded-xl">
           <div className="w-full h-auto">
             <div className="w-full h-auto flex justify-between items-start">
@@ -104,6 +105,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div className="col-span-6 flex flex-col justify-start gap-4">
           <div className="w-full h-auto bg-[#19113E] py-3 px-5 rounded-xl">
             <AccordionCollapse title="The amount of profit" bg={"#19113E"}>

@@ -10,7 +10,7 @@ import Checkbox from "@/components/Input/checkbox";
 
 export default function Drainer() {
   return (
-    <Layout>
+    <Layout path={'/drainer'}>
       <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
         <div className="col-span-5 flex flex-col justify-start gap-4">
           <div className="w-full h-auto bg-[#0C091A] py-3 px-5 rounded-xl">

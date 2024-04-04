@@ -12,7 +12,7 @@ export default function DomainItem({
   statistic,
 }) {
   return (
-    <div className="w-full h-auto grid grid-cols-9 gap-2 text-[#F5F5F5] text-xs font-normal">
+    <div className="w-full h-auto  grid grid-cols-9 gap-2 text-[#F5F5F5] text-xs font-normal">
       <div>{domain}</div>
       <div
         className={`w-4 h-4 rounded-full ${

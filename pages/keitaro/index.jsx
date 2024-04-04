@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function Keitaro() {
   return (
-    <Layout>Keitaro</Layout>
+    <Layout path={'/keitaro'}>Keitaro</Layout>
   )
 }

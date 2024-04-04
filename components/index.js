@@ -7,6 +7,8 @@ export { default as ButtonField } from "./Input/buttonField";
 export { default as SearchBar } from "./SearchBar/SearchBar";
 export { default as LendCard } from "./Lend/LendCard";
 export { default as DomainItem } from "./Domain/DomainItem";
+export { default as ModalItem } from "./Modal/ModalItem";
+export { default as ModalLogin } from "./Modal/ModalLogin";
 // export {default as  } from './'
 // export {default as  } from './'
 // export {default as  } from './'
