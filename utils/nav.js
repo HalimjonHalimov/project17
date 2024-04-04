@@ -22,27 +22,27 @@ export const navItems = [
   },
   {
     titie: "Lend",
-    route: "/a",
+    route: "/lend",
     icon: <BsCalendarEvent size={24} />,
   },
   {
     titie: "Modal",
-    route: "/s",
+    route: "/modal",
     icon: <HiOutlineShieldCheck size={24} />,
   },
   {
     titie: "Domains",
-    route: "/s",
+    route: "/domains",
     icon: <BsGlobe size={24} />,
   },
   {
     titie: "Cloaka",
-    route: "/s",
+    route: "/cloaka",
     icon: <IoFileTrayFullOutline size={24} />,
   },
   {
     titie: "Keitaro",
-    route: "/s",
+    route: "/keitaro",
     icon: <TfiJoomla size={24} />,
   },
 ];

@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { Title } from "..";
 
-const AccordionCollapse = ({ title, bg, children }) => {
+const AccordionCollapse = ({ title, children }) => {
   const [accordionOpen, setAccordionOpen] = useState(true);
 
   return (
     <div className=" group w-full h-auto">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className={`w-full h-auto flex justify-between items-center py-2 bg-[${bg}]`}
+        className={`w-full h-auto flex justify-between items-center py-2 bg-transparent`}
       >
         <Title>{title}</Title>
         <IoIosArrowUp
@@ -20,7 +20,7 @@ const AccordionCollapse = ({ title, bg, children }) => {
         />
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out bg-[${bg}] ${
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out bg-transparent ${
           accordionOpen
             ? "grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0"

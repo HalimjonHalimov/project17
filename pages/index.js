@@ -6,8 +6,8 @@ import { profitItems } from "@/utils/profit";
 export default function Home() {
   return (
     <Layout>
-      <div className="w-full h-auto p-4 grid grid-cols-6 items-start gap-4">
-        <div className="col-span-5 bg-[#140E2D] py-3 px-5 rounded-xl">
+      <div className="w-full h-auto p-4 grid grid-cols-7 items-start gap-4">
+        <div className="col-span-6 bg-[#140E2D] py-3 px-5 rounded-xl">
           <div className="w-full h-auto">
             <div className="w-full h-auto flex justify-between items-start">
               <div className="flex flex-col justify-start items-start gap-2">
@@ -104,8 +104,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="col-span-3 flex flex-col justify-start gap-4">
-          <div className="col-span-3 bg-[#19113E] py-3 px-5 rounded-xl">
+        <div className="col-span-4 flex flex-col justify-start gap-4">
+          <div className="w-full h-auto bg-[#19113E] py-3 px-5 rounded-xl">
             <AccordionCollapse title="The amount of profit" bg={"#19113E"}>
               <div className="w-full h-auto my-2 grid grid-cols-3">
                 <h6 className="text-sm font-normal text-[#605D6E]">Date:</h6>
@@ -153,7 +153,7 @@ export default function Home() {
               </button>
             </AccordionCollapse>
           </div>
-          <div className="col-span-3 bg-[#19113E] py-3 px-5 rounded-xl">
+          <div className="w-full h-auto bg-[#19113E] py-3 px-5 rounded-xl">
             <AccordionCollapse title={"Recent contacts"} bg="#19113E">
               <div className="w-full h-auto my-2 grid grid-cols-3">
                 <h6 className="text-sm font-normal text-[#605D6E]">Lend:</h6>
