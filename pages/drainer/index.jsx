@@ -188,7 +188,7 @@ export default function Drainer() {
             </AccordionCollapse>
           </div>
         </div>
-        <div className="col-span-2 bg-white w-full h-auto ">as</div>
+        {/* <div className="col-span-2 bg-white w-full h-auto ">as</div> */}
       </div>
     </Layout>
   );
