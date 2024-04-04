@@ -4,8 +4,8 @@ export { default as Title } from "./Title/title";
 export { default as Paragraph } from "./Title/paragraph";
 export { default as CallbackField } from "./Input/callbackField";
 export { default as ButtonField } from "./Input/buttonField";
-// export {default as  } from './'
-// export {default as  } from './'
+export {default as SearchBar } from './SearchBar/SearchBar'
+export {default as LendCard } from './Lend/LendCard'
 // export {default as  } from './'
 // export {default as  } from './'
 // export {default as  } from './'

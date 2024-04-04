@@ -11,7 +11,7 @@ export default function ButtonField({ id, placeholder, title, value }) {
           name={id}
           placeholder={placeholder}
           value={value}
-          className="w-full h-auto bg-transparent border-none text-[#F5F5F5] text-base font-normal outline-none"
+          className="w-full h-auto bg-transparent border-none text-[#F5F5F5] text-sm font-normal outline-none"
           disabled
         />
       </label>

