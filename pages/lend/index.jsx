@@ -9,7 +9,7 @@ export default function Lend() {
           <SearchBar id={"lendSearch"} btnTitle=" Upload landing" />
 
           <div className="w-full h-auto bg-[#0C091A] py-3 px-5 rounded-xl">
-            <Title children={"My landing pages"} />
+            <Title>My landing pages</Title>
             <div className="w-full h-auto my-4 grid grid-cols-4 gap-4">
               <LendCard />
               <LendCard />

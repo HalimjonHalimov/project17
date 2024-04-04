@@ -10,7 +10,7 @@ export default function Modal() {
           <SearchBar id={"modalSearch"} btnTitle=" Upload modal" />
 
           <div className="w-full h-auto bg-[#0C091A] py-3 px-5 rounded-xl">
-            <Title children={"My landing pages"} />
+            <Title>My landing pages</Title>
             <div className="w-full h-auto my-4 grid grid-cols-4 gap-x-4 gap-y-8">
               <ModalCard />
               <ModalCard />
