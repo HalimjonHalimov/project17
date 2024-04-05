@@ -37,12 +37,12 @@ export const navItems = [
   },
   {
     titie: "Cloaka",
-    route: "/cloaka",
+    route: "#",
     icon: <IoFileTrayFullOutline size={24} />,
   },
   {
     titie: "Keitaro",
-    route: "/keitaro",
+    route: "#",
     icon: <TfiJoomla size={24} />,
   },
 ];
