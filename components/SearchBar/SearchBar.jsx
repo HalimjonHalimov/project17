@@ -24,7 +24,7 @@ export default function SearchBar({ id, btnTitle, url }) {
         </label>
         <button
           type="button"
-          className="w-16 h-12 flex justify-center items-center bg-[#7E67FF] rounded-full text-base font-bold text-[#F5F5F5]"
+          className="w-16 h-12 md:block hidden flex justify-center items-center bg-[#7E67FF] rounded-full text-base font-bold text-[#F5F5F5]"
         >
           <FiFilter size={24} />
         </button>

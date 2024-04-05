@@ -12,7 +12,7 @@ export default function DomainItem({
   statistic,
 }) {
   return (
-    <div className="w-full h-auto  grid grid-cols-9 gap-2 text-[#F5F5F5] text-xs font-normal">
+    <div className="w-full h-auto  grid md:grid-cols-9 grid-cols-4 gap-2 text-[#F5F5F5] text-xs font-normal">
       <div>{domain}</div>
       <div
         className={`w-4 h-4 rounded-full ${
@@ -21,15 +21,15 @@ export default function DomainItem({
       ></div>
       <div>{click}</div>
       <div>{connect}</div>
-      <div>{percent}</div>
-      <div>{bot}</div>
-      <div>{percentE}</div>
+      <div className="md:block hidden">{percent}</div>
+      <div className="md:block hidden">{bot}</div>
+      <div className="md:block hidden">{percentE}</div>
       <div
-        className={`w-4 h-4 rounded-full ${
+        className={`w-4 h-4 rounded-full md:block hidden ${
           metaMask == true ? "bg-[#64CB40]" : "bg-[#CB4040]"
         } `}
       ></div>
-      <div>{statistic}</div>
+      <div className="md:block hidden">{statistic}</div>
     </div>
   );
 }

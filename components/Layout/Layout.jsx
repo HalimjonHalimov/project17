@@ -12,7 +12,7 @@ export default function Layout({ children, path }) {
     <div className="w-full h-auto flex justify-start items-start bg-[#15131E]">
       <Navbar path={path} navbar={navbar} handleNav={handleNav} />
       <div className="w-full h-auto relative">
-        <div className="absolute top-4 left-4 md:hidden block">
+        <div className="absolute top-4 right-4 md:hidden block">
           {" "}
           <button
             type="button"

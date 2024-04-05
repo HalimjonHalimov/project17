@@ -10,9 +10,9 @@ export default function Navbar({ path, navbar, handleNav }) {
 
   return (
     <div
-      className={`${
-        navbar ? "-left-[100%]" : "left-0"
-      }  md:relative fixed md:w-[388px] w-full h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4 rounded-xl transition-all duration-200 ease-in-out z-10`}
+      className={`md:relative fixed -left-[100%] md:left-0 md:w-[388px] w-full h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4 rounded-xl transition-all duration-200 ease-in-out opacity-100 z-10 ${
+        navbar ? "left-0 opacity-100" : "-left-[100%] opacity-0"
+      } `}
     >
       <button
         type="button"
@@ -74,6 +74,7 @@ export default function Navbar({ path, navbar, handleNav }) {
         {navItems.map((item, i) => (
           <li
             key={i}
+            onClick={handleNav}
             className="relative w-full h-[49px] flex justify-start items-center px-4 py-2"
           >
             <Link

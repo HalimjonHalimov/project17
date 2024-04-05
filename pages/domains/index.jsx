@@ -4,10 +4,10 @@ import { LuPlusCircle } from "react-icons/lu";
 
 export default function Domains() {
   return (
-    <Layout path={'/domains'}>
-      <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
+    <Layout path={"/domains"}>
+      <div className="w-full h-auto p-4 grid md:grid-cols-9 grid-cols-1 items-start gap-4">
         <div className="col-span-8 w-full h-auto flex flex-col gap-4">
-          <div className="w-full h-auto bg-[#140E2D] py-3 px-5 rounded-xl flex justify-between items-center">
+          <div className="w-full h-auto bg-[#140E2D] py-3 px-5 rounded-xl grid md:grid-cols-3 grid-cols-1 justify-items-center md:gap-0 gap-y-2">
             <div>
               <Paragraph title={"Number of domains"} />
               <Title>Login</Title>
@@ -26,24 +26,24 @@ export default function Domains() {
           </div>
           <div className="w-full h-auto bg-[#19113E] py-3 px-5 rounded-xl">
             <Title>The working panel</Title>
-            <div className="w-full h-auto grid grid-cols-9 gap-2">
+            <div className="w-full h-auto grid md:grid-cols-9 grid-cols-4 gap-2">
               <span className="text-[#605D6E] text-xs font-normal">Domain</span>
               <span className="text-[#605D6E] text-xs font-normal">Status</span>
               <span className="text-[#605D6E] text-xs font-normal">Clicks</span>
               <span className="text-[#605D6E] text-xs font-normal">
                 Connect
               </span>
-              <span className="text-[#605D6E] text-xs font-normal">
+              <span className="md:block hidden text-[#605D6E] text-xs font-normal">
                 Percent
               </span>
-              <span className="text-[#605D6E] text-xs font-normal">Bots</span>
-              <span className="text-[#605D6E] text-xs font-normal">
+              <span className="md:block hidden text-[#605D6E] text-xs font-normal">Bots</span>
+              <span className="md:block hidden text-[#605D6E] text-xs font-normal">
                 Percent. En.
               </span>
-              <span className="text-[#605D6E] text-xs font-normal">
+              <span className="md:block hidden text-[#605D6E] text-xs font-normal">
                 CT MetaMask
               </span>
-              <span className="text-[#605D6E] text-xs font-normal">
+              <span className="md:block hidden text-[#605D6E] text-xs font-normal">
                 Statistics
               </span>
             </div>
