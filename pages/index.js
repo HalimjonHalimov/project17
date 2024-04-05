@@ -6,12 +6,12 @@ import { profitItems } from "@/utils/profit";
 export default function Home() {
   return (
     <Layout path={'/'}>
-      <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
+      <div className="w-full h-auto p-4 grid md:grid-cols-9 grid-cols-1 items-start gap-4">
         
-        <div className="col-span-8 bg-[#140E2D] py-3 px-5 rounded-xl">
+        <div className="md:col-span-8 col-span-1 bg-[#140E2D] py-3 px-5 rounded-xl">
           <div className="w-full h-auto">
-            <div className="w-full h-auto flex justify-between items-start">
-              <div className="flex flex-col justify-start items-start gap-2">
+            <div className="w-full h-auto grid md:grid-cols-3 grid-cols-1  md:gap-0 gap-y-2">
+              <div className="flex flex-col justify-start md:items-start items-center gap-2">
                 <span className="flex justify-start items-center gap-2 text-base font-bold text-[#F5F5F5]">
                   <svg
                     width="24"
@@ -37,7 +37,7 @@ export default function Home() {
                   ID: <span>1211121134154545</span>
                 </span>
               </div>
-              <div className="flex flex-col justify-start items-start gap-2">
+              <div className="flex flex-col justify-start md:items-start items-center gap-2">
                 <span className="flex justify-start items-center gap-2 text-base font-bold text-[#F5F5F5]">
                   <svg
                     width="25"
@@ -65,7 +65,7 @@ export default function Home() {
               </div>
               <button
                 type="button"
-                className="flex justify-between items-center gap-4 py-2 px-4 bg-[#5A42E3] text-[#F5F5F5] text-base font-semibold rounded-full"
+                className="w-24 h-8 mx-auto flex justify-between items-center gap-4 py-2 px-4 bg-[#5A42E3] text-[#F5F5F5] text-base font-semibold rounded-full"
               >
                 <svg
                   width="20"
@@ -86,19 +86,19 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-4 my-4">
               <button
                 type="button"
-                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] text-base font-normal rounded-xl transition-all duration-150 ease-in-out "
+                className="w-full md:h-[45px] h-10 border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] md:text-base text-xs font-normal rounded-xl transition-all duration-150 ease-in-out "
               >
                 Connection 3{" "}
               </button>
               <button
                 type="button"
-                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] text-base font-normal rounded-xl transition-all duration-150 ease-in-out "
+                className="w-full md:h-[45px] h-10 border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] md:text-base text-xs font-normal rounded-xl transition-all duration-150 ease-in-out "
               >
                 Aprovals 3{" "}
               </button>
               <button
                 type="button"
-                className="w-full h-[45px] border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] text-base font-normal rounded-xl transition-all duration-150 ease-in-out "
+                className="w-full md:h-[45px] h-10 border border-[#5A42E3] text-[#F5F5F5] hover:text-[#0C091A] hover:bg-[#F5F5F5] md:text-base text-xs font-normal rounded-xl transition-all duration-150 ease-in-out "
               >
                 Domains 3{" "}
               </button>
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-6 flex flex-col justify-start gap-4">
+        <div className="md:col-span-6 col-span-1 flex flex-col justify-start gap-4">
           <div className="w-full h-auto bg-[#19113E] py-3 px-5 rounded-xl">
             <AccordionCollapse title="The amount of profit" bg={"#19113E"}>
               <div className="w-full h-auto my-2 grid grid-cols-3">
@@ -158,16 +158,16 @@ export default function Home() {
           <div className="w-full h-auto bg-[#19113E] py-3 px-5 rounded-xl">
             <AccordionCollapse title={"Recent contacts"} bg="#19113E">
               <div className="w-full h-auto my-2 grid grid-cols-3">
-                <h6 className="text-sm font-normal text-[#605D6E]">Lend:</h6>
-                <h6 className="text-sm font-normal text-[#605D6E]">IP:</h6>
-                <h6 className="justify-self-end text-sm font-normal text-[#605D6E]">
+                <h6 className="md:text-sm text-[14px] font-normal text-[#605D6E]">Lend:</h6>
+                <h6 className="md:text-sm text-[14px] font-normal text-[#605D6E]">IP:</h6>
+                <h6 className="justify-self-end md:text-sm text-[14px] font-normal text-[#605D6E]">
                   Wallet:
                 </h6>
               </div>
               {profitItems.map((item, i) => (
                 <div
                   key={i}
-                  className="w-full h-auto my-2 grid grid-cols-3 text-[#F5F5F5] text-base font-normal"
+                  className="w-full h-auto my-2 grid grid-cols-3 text-[#F5F5F5] md:text-base text-[14px] font-normal"
                 >
                   <div>fffsddf.com</div>
                   <div>123.12.12.12:000</div>
@@ -178,7 +178,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full h-auto col-span-2 py-3 px-5 bg-[#140E2D] rounded-xl">
+        <div className="w-full h-auto md:col-span-2 col-span-1 py-3 px-5 bg-[#140E2D] rounded-xl">
           <Title>Recent payments</Title>
           <div className="w-full h-auto my-2 grid grid-cols-2">
             <h6 className="text-sm font-normal text-[#605D6E]">Currency</h6>
@@ -187,7 +187,7 @@ export default function Home() {
           {cryptoItems.map((item, i) => (
             <div
               key={i}
-              className="w-full h-auto my-1 grid grid-cols-2 text-[#F5F5F5] text-base font-normal uppercase"
+              className="w-full h-auto my-1 grid grid-cols-2 text-[#F5F5F5] md:text-base text-[14px] font-normal uppercase"
             >
               <div className="flex justify-start items-center gap-2">
                 {" "}

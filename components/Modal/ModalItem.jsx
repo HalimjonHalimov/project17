@@ -12,7 +12,7 @@ export default function ModalItem({ domain, status }) {
       ></div>
       <button
         type="button"
-        className="flex justify-center rounded-full items-center gap-4 text-xs font-bold text-[#f5f5f5] bg-[#7E67FF] w-36 h-8 transition-all duration-200 ease-in-out hover:opacity-75"
+        className="flex justify-center rounded-full items-center md:gap-4 gap-1 text-xs font-bold text-[#f5f5f5] bg-[#7E67FF] md:w-36 w-28 h-8 transition-all duration-200 ease-in-out hover:opacity-75"
       >
         <LuPlusCircle size={14} />
         Add a domain

@@ -2,12 +2,27 @@ import { navItems } from "@/utils/nav";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { MdOutlineMenuOpen } from "react-icons/md";
+import { IoCloseSharp } from "react-icons/io5";
 
-export default function Navbar({path}) {
-  const pathname = path
+export default function Navbar({ path, navbar, handleNav }) {
+  const pathname = path;
 
   return (
-    <div className="w-[388px] h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4 rounded-xl">
+    <div
+      className={`${
+        navbar ? "-left-[100%]" : "left-0"
+      }  md:relative fixed md:w-[388px] w-full h-screen flex flex-col justify-start items-center gap-4 bg-[#1E1A33] py-10 px-4 rounded-xl transition-all duration-200 ease-in-out z-10`}
+    >
+      <button
+        type="button"
+        onClick={handleNav}
+        className="w-full h-auto md:hidden flex justify-end items-center"
+      >
+        <IoCloseSharp size={24} color={"#f5f5f5"} className="" />
+        {/* <MdOutlineMenuOpen size={24} color={"#f5f5f5"} className="" /> */}
+      </button>
+
       <div className="w-full h-auto bg-[#140E2D] p-3 rounded-xl">
         <div className="w-full h-auto flex justify-start items-center gap-2 text-xl font-bold text-[#F5F5F5]">
           <span>
@@ -54,6 +69,7 @@ export default function Navbar({path}) {
           </span>
         </div>
       </div>
+
       <ul className="w-full h-auto flex flex-col justify-start items-center gap-1">
         {navItems.map((item, i) => (
           <li
@@ -75,6 +91,7 @@ export default function Navbar({path}) {
           </li>
         ))}
       </ul>
+
       <button
         type="button"
         className="w-full h-auto rounded-full hover:text-[#0C091A] hover:bg-[#F5F5F5]  bg-[#0C091A] py-1 px-4 text-[#F5F5F5] text-xl font-bold border border-[#0C091A] transition-all duration-150 ease-in-out"

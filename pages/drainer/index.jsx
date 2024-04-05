@@ -11,13 +11,13 @@ import Checkbox from "@/components/Input/checkbox";
 export default function Drainer() {
   return (
     <Layout path={'/drainer'}>
-      <div className="w-full h-auto p-4 grid grid-cols-9 items-start gap-4">
+      <div className="w-full h-auto p-4 grid md:grid-cols-9 grid-cols-1 items-start gap-4">
         <div className="col-span-5 flex flex-col justify-start gap-4">
           <div className="w-full h-auto bg-[#0C091A] py-3 px-5 rounded-xl">
             <AccordionCollapse title="Misc Settings">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-y-4 gap-x-8">
                 <div className="flex justify-between items-center">
-                  <span className="text-[#F5F5F5] text-base font-normal">
+                  <span className="text-[#F5F5F5] md:text-base text-[12px] font-normal">
                     Log Draining Strategy
                   </span>
                   <Checkbox id={"checkbox"} checked={false} />
@@ -62,7 +62,7 @@ export default function Drainer() {
                 </span>
                 <Checkbox id={"checkbox4"} checked={false} />
               </div>
-              <div className="w-full h-auto my-4 grid grid-cols-2 gap-4">
+              <div className="w-full h-auto my-4 grid md:grid-cols-2 grid-cols-1 gap-4">
                 <ButtonField
                   id={"btn"}
                   placeholder="connectButton"
@@ -74,7 +74,7 @@ export default function Drainer() {
                   title="Two Step Class"
                 />
               </div>
-              <div className="w-full h-auto my-2 grid grid-cols-2 gap-y-2 gap-x-12">
+              <div className="w-full h-auto my-2 grid md:grid-cols-2 grid-cols-1 gap-y-2 gap-x-12">
                 <div className="w-full h-auto flex justify-between items-center">
                   <span className="text-[#F5F5F5] text-base font-normal">
                     Ethereum
@@ -135,7 +135,7 @@ export default function Drainer() {
                 </span>
                 <Checkbox id={"checkbox5"} checked={false} />
               </div>
-              <div className="w-full h-auto my-2 grid grid-cols-3 gap-y-1 gap-x-4">
+              <div className="w-full h-auto my-2 grid md:grid-cols-3 grid-cols-2 gap-y-1 gap-x-4">
                 <ButtonField
                   id={"LP"}
                   placeholder="value"

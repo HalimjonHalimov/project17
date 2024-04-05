@@ -2,14 +2,16 @@ import React from "react";
 import { LuPlusCircle } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
 import { FiFilter } from "react-icons/fi";
+import { useRouter } from "next/router";
 
-export default function SearchBar({ id, btnTitle }) {
+export default function SearchBar({ id, btnTitle, url }) {
+  const router = useRouter()
   return (
-    <form action="#" className="w-full flex justify-between items-center">
+    <form action="#" className="w-full flex md:flex-row flex-col justify-between items-center gap-4">
       <div className="w-full h-auto flex justify-start items-center gap-4">
         <label
           htmlFor={id}
-          className="w-[424px] h-12 px-5 rounded-xl flex justify-start items-center gap-2 bg-[#140E2D] text-[#F5F5F5]"
+          className="md:w-[424px] w-full h-12 px-5 rounded-xl flex justify-start items-center gap-2 bg-[#140E2D] text-[#F5F5F5]"
         >
           <IoSearchOutline size={24} />
           <input
@@ -28,7 +30,8 @@ export default function SearchBar({ id, btnTitle }) {
         </button>
       </div>
       <button
-        type="sumbit"
+        type="button"
+        onClick={() => router.push(url)}
         className="w-52 h-12 flex justify-evenly items-center rounded-full text-[#F5F5F5] text-sm font-bold bg-[#7E67FF] border-none hover:bg-[#F5F5F5] hover:text-[#7E67FF] transition-all duration-200 ease-in-out"
       >
         <LuPlusCircle size={24} />
